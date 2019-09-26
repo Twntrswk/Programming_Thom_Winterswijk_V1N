@@ -1,0 +1,3 @@
+list = ['Tash Sultana', 'Anthony Kiedis', 'Eddie Vedder']
+list[2] = 'Kurt Cobain'
+print(list)
