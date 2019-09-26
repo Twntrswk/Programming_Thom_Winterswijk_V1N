@@ -1,0 +1,7 @@
+print(len('Supercalifragilisticexpialidocious'))
+print('ice' in 'Supercalifragilisticexpialidocious')
+print('Antidisestablishmentarianism' > 'Honorificabilitudinitatibus')
+
+comp = ['Berlioz', 'Borodin', 'Brian', 'Bartok', 'Bellini', 'Buxtehude', 'Bernstein']
+comp.sort()
+print(comp[0], comp[-1])
