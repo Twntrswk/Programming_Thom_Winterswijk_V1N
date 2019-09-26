@@ -1,0 +1,24 @@
+def wijzig(letterlijst):
+    letterlijst.clear()
+    letterlijst.append('d')
+    letterlijst.append('e')
+    letterlijst.append('f')
+
+
+    return letterlijst
+
+
+letterlijst = (['a', 'b', 'c'])
+print(letterlijst)
+wijzig(letterlijst)
+print(letterlijst)
+
+
+#Waarom kun je in de functie niet de opdracht lijst = ['d', 'e', 'f'] geven?
+#Je kunt maar 1 waarde (per keer) meegeven aan append.
+
+#Werkt jouw functie ook met een string-parameter? Probeer dit! Waarom werkt het wel/niet?
+#Nee, want clear werkt niet op een immutable parameter.
+
+#Welke rol speelt (im)mutabiliteit in deze vraag?
+#Clear is geen functie die gebruikt kan worden op immutable parameters. (string/tuple)
