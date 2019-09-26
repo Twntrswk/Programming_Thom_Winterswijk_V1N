@@ -1,0 +1,5 @@
+uurloon = input('Wat verdien je per uur?')
+uren = input('Hoeveel uur heb je gewerkt?')
+eindbedrag = int(uurloon) * int(uren)
+overzicht = uren + ' uur werken levert ' + str(eindbedrag) + ' euro op.'
+print(overzicht)
