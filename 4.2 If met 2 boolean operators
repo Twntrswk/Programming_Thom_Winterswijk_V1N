@@ -1,0 +1,8 @@
+leeftijd = float(input('Geef je leeftijd '))
+nlpp = input('Ben je in bezit van een Nederlands paspoort? ')
+
+
+if leeftijd > 17 and nlpp == 'ja':
+    print('Gefeliciteerd, je mag stemmen!')
+else:
+    print('Je mag jammer genoeg niet stemmen.')
