@@ -1,0 +1,10 @@
+def kwadraten_som(grondgetallen):
+    all = 0
+    for x in grondgetallen:
+        if x >= 0:
+            all += x **2
+
+    return all
+
+
+print(kwadraten_som([-4, 440, 3, 7]))
