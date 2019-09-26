@@ -1,0 +1,3 @@
+lijst = ['maandag', 'dinsdag', 'woensdag']
+for item in lijst:
+    print(item [:2])
