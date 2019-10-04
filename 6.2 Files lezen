@@ -1,0 +1,10 @@
+infile = open('Kaartnummers.txt', 'r')
+
+regels = infile.readlines()
+
+for regel in regels:
+    woorden = regel.split(', ')
+    woorden = woorden[1].strip('\n')
+    print(woorden + 'heeft kaartnummer ' + woorden[0])
+    
+    
