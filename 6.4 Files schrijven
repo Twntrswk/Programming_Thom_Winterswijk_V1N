@@ -1,0 +1,15 @@
+import datetime
+
+
+def get_time():
+    return datetime.datetime.today().strftime("%a %d %b %Y")
+
+
+file = open('hardlopers.txt', 'a')
+
+while True:
+    name = input('Voer naam van de hardloper in: ')
+    if name == '':
+        break
+    runner = get_time() + ', ' + name + '\n'
+    file.write(runner)
