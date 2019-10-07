@@ -1,0 +1,15 @@
+def leesnotepad(kaartnummers: str) -> str:
+    note = open(kaartnummers)
+    text = note.read()
+    note.close()
+
+    return text
+
+
+cardnumbers: list = leesnotepad('Kaartnummers.txt').splitlines()
+print('Deze file telt ' + str(len(cardnumbers)) + ' regels')
+highest_number: str = max(cardnumbers)
+split_number: str = highest_number.split(',')
+index: int = cardnumbers.index(max(cardnumbers))
+
+print('Het grootste kaarnummer is: ' + str(split_number[0]) + ' en dat staat op regel ' + str(index + 1))
