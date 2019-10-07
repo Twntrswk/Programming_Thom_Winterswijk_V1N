@@ -2,8 +2,8 @@ import datetime
 
 
 def get_time():
-    return datetime.datetime.today().strftime("%a %d %b %Y")
-
+    return datetime.datetime.today().strftime("%a %d %b %Y, %H:%M:%S")  #Verdere %H:%M:%S staan voor hour minute second.
+                                
 
 file = open('hardlopers.txt', 'a')
 
