@@ -1,0 +1,9 @@
+def gemiddelde():
+    zin = input('geef de zin op: ')
+    letters = len(zin) - zin.count(' ')
+    woorden = len(zin.split())
+    gemiddelde = str(int(letters) / int(woorden))
+
+    print(gemiddelde)
+
+gemiddelde()
