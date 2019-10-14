@@ -1,0 +1,9 @@
+invoer = '5-9-7-1-7-8-3-2-4-8-7-9'
+nummers = invoer.split('-')
+nummers = list(map(int, nummers))
+nummers.sort()
+
+print('Gesorteerde list van ints:', nummers)
+print('Grootste getal: ' + str(max(nummers)) + ' en Kleinste getal: ' + str(min(nummers)) + '\r')
+print('Aantal getallen: ' + str(len(nummers)) + ' en Som van de getallen: ' + str(sum(nummers)) + '\r')
+print('Gemiddelde: ' + str(sum(nummers) / len(nummers)))
