@@ -1,0 +1,6 @@
+groen = set(['Boxtel', 24, 'Beukenlaan', 'Eindhoven', 'Geldrop', 'Heeze', 25, 'Weert'])
+bruin = set(['Boxtel', 'Best', 27, 'Eindhoven', "Helmond 't Hout", 'Helmond', 'Helmond Brouwhuis', 'Deurne'])
+
+print(groen.intersection(bruin))
+print(bruin.difference(groen))
+print(groen.union(bruin))
