@@ -1,0 +1,27 @@
+def ticker(filename):
+    file = open(filename)
+    data = {}
+
+    for bedrijf in file.read().splitlines():
+        splitted = bedrijf.split(':')
+        data[splitted[0]] = splitted[1]
+
+    return data
+
+def get_ticker_by_company():
+    bedrijven = ticker('ticker.txt')
+    name = input('Enter company name: ')
+    print('Ticker symbol: ' + bedrijven.get(name) + '\n')
+
+def get_company_by_ticker():
+    bedrijven = ticker('ticker.txt')
+    tick = input('Enter ticker symbol: ')
+
+    for b in bedrijven:
+        if bedrijven[b] == tick:
+            print('Company name: ' + b + '\n')
+            break
+
+
+get_ticker_by_company()
+get_company_by_ticker()
