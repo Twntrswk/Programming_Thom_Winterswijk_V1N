@@ -1,0 +1,22 @@
+def namen():
+    names = {}
+
+    while True:
+        name = input('Volgende naam: ')
+
+        if name != '':
+            if name not in names:
+                names[name] = 1
+            else:
+                names[name] = names[name] + 1
+
+        else:
+            for n in names:
+                if names[n] == 1:
+                    print('Er is ' + str(names[n]) + ' student met de naam ' + n)
+                else:
+                    print('Er zijn ' + str(names[n]) + ' studenten met de naam ' + n)
+            break
+
+
+namen()
