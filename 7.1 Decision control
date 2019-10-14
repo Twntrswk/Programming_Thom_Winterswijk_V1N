@@ -1,0 +1,15 @@
+def seizoen(maand):
+    if maand >= 3 and maand < 6:
+        print('lente')
+    elif maand >= 6 and maand < 9:
+        print('zomer')
+    elif maand >= 9 and maand < 12:
+        print('herfst')
+    else:
+        print('winter')
+
+
+seizoen(1)
+seizoen(7)
+seizoen(10)
+seizoen(5)
