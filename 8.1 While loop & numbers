@@ -1,0 +1,10 @@
+nummers = []
+
+while True:
+    nummer = int(input('Geef een getal: '))
+
+    if nummer != 0:
+        nummers.append(nummer)
+    else:
+        print('Er zijn ' + str(len(nummers)) + ' getallen ingevoerd, de som is: ' + str(sum(nummers)))
+        break
