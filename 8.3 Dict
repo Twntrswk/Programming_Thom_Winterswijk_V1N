@@ -1,0 +1,14 @@
+cijfers = {
+    'Jeroen': 7.0,
+    'Peter': 9.8,
+    'Hannah': 9.6,
+    'Merel': 5.5,
+    'Thijs': 9.0,
+    'Joost': 9.2,
+    'Rik': 7.2,
+    'Jan': 4.2,
+    }
+
+for a, b in cijfers.items():
+    if b > float(9.0):
+        print(a, b)
