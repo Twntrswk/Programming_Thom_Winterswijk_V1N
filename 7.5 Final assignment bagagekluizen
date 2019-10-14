@@ -1,0 +1,64 @@
+infile = open('kluizen.txt', 'r+')
+regels_tekst = infile.readlines()
+
+
+def toon_aantal_kluizen_vrij(kluizen_bestand):
+    aantal_klzn = 12 -len(kluizen_bestand)
+    return aantal_klzn
+
+
+def nieuwe_kluis(kluizen_bestand):
+    kluis_nummer = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    if toon_aantal_kluizen_vrij(kluizen_bestand) == 0:
+        print('Er zijn geen kluizen beschikbaar.')
+
+    else:
+        for kluis in kluizen_bestand:
+            kluis = kluis.split(';')
+            kluis_nummer.remove(int(kluis[0]))
+        wachtwoord = str(input('U krijgt kluisnummer: ' + str(kluis_nummer[0]) + ' voer een wachtwoord in: '))
+
+        if len(kluizen_bestand) > 0:
+            infile.write('\n' + str(kluis_nummer) + ';' + wachtwoord)
+
+        else:
+            infile.write(str(kluis_nummer[0]) + ';' + wachtwoord)
+        print('Het is gelukt.')
+
+
+def kluis_openen(kluizen_bestand):
+    kluis_nummer = str(input('Wat is uw kluisnummer: '))
+    kluis_wachtwoord = str(input('Wat is het wachtwoord: '))
+    beiden = kluis_nummer + ';' + kluis_wachtwoord
+
+    if beiden in kluizen_bestand:
+        print('Wachtwoord correct, u kunt nu de kluis openen.')
+
+    else:
+        print('Deze combinatie is onjuist.')
+
+
+print('1: Ik wil weten hoeveel kluizen nog vrij zijn.'
+      '\n2: Ik wil een nieuwe kluis. '
+      '\n3: Ik wil even iets uit mijn kluis halen.')
+optie = int(input('Vul het nummer in van de gewenste optie:'))
+
+if optie == 1:
+    print('Er zijn nog ' + str(toon_aantal_kluizen_vrij(regels_tekst)) + ' kluizen over.')
+elif optie == 2:
+    nieuwe_kluis(regels_tekst)
+elif optie == 3:
+    kluis_openen(regels_tekst)
+else:
+    print('Ongeldige invoer, probeer het nogmaals.')
+
+infile.close()
+
+
+
+#Kluizen.txt bestand:
+
+#11;6754
+#1;geheim
+#5;kluisvanpietje
+#12;z@terd@g
