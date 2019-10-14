@@ -1,0 +1,23 @@
+student_cijfers = [[95, 92, 86], [66, 75, 54], [89, 72, 100], [34, 0, 0]]
+
+
+def gemiddelde_student(student_cijfers: list) -> float:
+    return sum(student_cijfers) / len(student_cijfers)
+
+
+def gemiddelde_studenten(studenten_cijfers: list) -> float:
+    average_list: list = []
+
+    for student_cijfers in studenten_cijfers:
+        average_list.append(
+            gemiddelde_student(student_cijfers)
+        )
+
+    return gemiddelde_student(average_list)
+
+
+print(gemiddelde_student(student_cijfers[0]))
+print(gemiddelde_student(student_cijfers[1]))
+print(gemiddelde_student(student_cijfers[2]))
+print(gemiddelde_student(student_cijfers[3]))
+print(gemiddelde_studenten(student_cijfers))
